@@ -1,0 +1,77 @@
+main {
+    flex: 1; /* flex-direction: row em volta do main e da sidebar, entao 
+    com flex: 1 faz com que o main ocupe todo o espaço disponivel dele */
+}
+
+main ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 colunas, poderia ser tbm "repeat(2, 1fr)" */
+    gap: 20px;
+    list-style: none; /*remove bolinhas do li */
+}
+
+/*cada dev*/
+li.dev-item {
+    background: #FFF;
+    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    padding: 20px;
+}
+
+/*imagem + user-info*/
+li.dev-item header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+li.dev-item header img {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+}
+
+/*nome e tecnologias*/
+li.dev-item header .user-info {
+    margin-left: 10px;
+}
+
+/*nome*/
+.user-info strong {
+    display: block;
+    font-size: 16px;
+    color: #333;
+}
+
+/*tecnologias que trabalha*/
+.user-info span {
+    font-size: 13px;
+    color: #999999;
+    margin-top: 2px;
+}
+
+/*biografia*/
+li.dev-item p {
+    color: #666;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 10px 0;
+}
+
+/*link pro perfil do github*/
+li.dev-item a {
+    color: #8e4dff;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+li.dev-item a:hover {
+    color: #5d25be;
+}
+
+@media (max-width: 650px) {
+    main ul {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+}
